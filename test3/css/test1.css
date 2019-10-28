@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+    background:#D7FFF0;
+    color: white;
+    padding: 10px;
+	position: fixed;
+}
+.tag-container{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	text-align: center;
+	width: 300px;
+}
+.tag{
+    background:rgba(175, 215, 237);
+    border:1px solid white;
+    border-radius:20px;
+    width: 50px;
+    height: 30px;
+	line-height: 30px;
+}
+
+.wrapper{
+    overflow: hidden;
+    padding-top:80px;
+}
+
+.middle .main{
+    margin: 0 180px;
+    background: #EFEFDA;
+    height: 300px;
+	width: 100%;
+}
+.middle{
+	display: inline-block;
+}
+.main{
+	display: flex;
+	justify-content: space-around;
+}
+.left{
+    width: 200px;
+    height: 300px;
+    background: #EFEFDA;
+    text-align: center;
+	float: left;
+	display: inline-block;
+}
+.right{
+    width: 200px;
+    height: 300px;
+    background: #EFEFDA;
+    text-align: center;
+	float: right;
+	display: inline-block;
+}
+.box1{
+    width: 100px;
+    height: 300px;
+    background-color: rgba(175, 215, 237);
+	display: table;
+	text-align: center;
+}
+.box2{
+    width: 100px;
+    height: 300px;
+    background-color: rgba(175, 215, 237);
+	display: table;
+	text-align: center;
+}
+.box3{
+    width: 100px;
+    background-color: rgba(175, 215, 237);
+}
+.word_one{ 
+    width:100%;
+    font-size: 15px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.word_two{
+    line-height: 22px;
+    font-size: 15px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.word_three{
+    height: 60px;
+    text-align: center;
+    font-size: 15px;
+	margin-top: 120px;
+}
+.text-container{
+    height: 700px;
+}
+.add-color{
+    background-color: rgb(239, 241, 203);
+    margin-top:20px;
+    border: 10px solid rgb(215, 237, 175);
+}
+.text{
+	column-count: 5;
+	column-gap: 20px;
+	column-rule-style: dotted;
+}
+.footer{
+    width:100px;
+    height: 100px;
+    line-height: 100px;
+    background:#6699CC;
+    font-size: 20px;
+	position: sticky;
+	left: 600px;
+	bottom: 200px;
+}
