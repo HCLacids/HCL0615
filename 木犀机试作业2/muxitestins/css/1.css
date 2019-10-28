@@ -1,0 +1,196 @@
+.head{
+	display: flex;
+	position: sticky;
+	top: 0;
+	border-bottom: 1px gainsboro solid;
+	background-color: white;
+	height: 50px;
+}
+
+.instagramPic{
+	margin: 0 200px 0 200px;
+	display: flex;
+	height: 50px;
+	line-height: 50px;
+}
+.instagramPic img{
+	border-right: 1px #000000 solid;
+	vertical-align: middle;
+	border-right-height: 4px;
+}
+.instagram{
+	padding-left: 10px;
+	font-size: 30px;
+	vertical-align: middle;
+}
+.search{
+	border: 1px gainsboro solid;
+	width: 200px;
+	height: 20px;
+	border-radius: 4px;
+	padding: 5px;
+	display: flex;
+	margin-top: 10px;
+	}
+.search input{
+	padding-top: 0;
+	height: 20px;	
+}
+.input{
+	border: 0 ;
+	
+}
+.searchTest{
+	color:gainsboro;
+	text-align: center;
+}
+.user{
+	margin-left:300px;
+}
+.user img{
+	height: 30px;
+	margin: 10px;
+}
+.page{
+	margin-top: 40px;
+}
+.userPost{
+	border: 1px gainsboro solid;
+	margin-left: 250px;
+	width: 800px;
+	display: inline-block;
+}
+.userHead{
+	height: 50px;
+	vertical-align: middle;
+	line-height: 50px;
+}
+.userHead img{
+	width: 30px;
+	border-radius: 40px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.userName{
+	display: inline-block;
+	vertical-align: middle;
+}
+.point{
+	display: inline-block;
+	float: right;
+	padding-right: 20px;
+}
+.postImg img{
+	width: 100%;
+	height: 800px;
+}
+.like{
+	width: 100%;
+}
+.pic img{
+	width: 40px;
+	border-radius: 40px;
+	display: inline-block;
+	padding-left: 10px;
+}
+.peopleLike{
+	display: inline-block;
+}
+.comment{
+	padding-left: 20px;
+}
+.comment img{
+	float: right;
+}
+span{
+	color: #DCDCDC;
+}
+.commentSent{
+	color: #D3D3D3;
+	padding-left: 20px;
+}
+.add{
+	display: inline-block;
+}
+.send{
+	display: inline-block;
+	color: aqua;
+	float: right;
+}
+	
+
+
+.userFollower{
+	position: sticky;
+	top: 70px;
+	right: 100px;
+	float: right;
+	display: inline-block;
+}
+.userInfor img{
+	width: 40px;
+	border-radius: 40px;
+	display: inline-block;
+}
+.name{
+	display: inline-block;
+	font-size: 15px;
+}
+.gray{
+	color: gainsboro;
+	font-size: 13px;
+}
+.follwers img{
+	width: 35px;
+	border-radius: 35px;
+	
+}
+.follwers{
+	width: 200px;
+	display: flex;
+	
+}
+.fastVideo{
+	border: 1px gainsboro solid;
+	width: 220px;
+	height: 150px;
+	overflow: scroll;
+	
+}
+.fastVideo::-webkit-scrollbar{	
+	width: 5px;
+	height:0;
+	background-color:white;
+
+}
+.fastVideo::-webkit-scrollbar-track{ 
+	border-radius: 30px; 
+	background-color:gainsboro;
+    
+}
+.fastVideo::-webkit-scrollbar-thumb{  
+	border-radius: 30px;  
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+	background-color:gainsboro;
+} 
+
+.inline{
+	display: inline-block;
+}
+.inline1{
+	display: inline-block;
+	color: #D3D3D3;
+}
+.1{
+	display: inline-block;
+}
+.kuaipai{
+	display: inline-block;
+	color: gainsboro;
+}
+.all{
+	display: inline-block;
+	float: right;
+}
