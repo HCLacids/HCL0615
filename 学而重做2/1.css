@@ -1,0 +1,262 @@
+body{
+    background-color: ghostwhite;
+	margin: 0;
+}
+.head{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    text-align: center;
+    line-height: 70px;
+}
+.headCenter{
+	width: 1000px;
+	margin: auto;
+}
+.img1{
+    width: 30px;
+    vertical-align: middle;
+	padding-right: 5px;
+}
+.head-right{
+    display: inline-block;
+    color: green;
+	margin-right: 20px;
+}
+.head-control{
+    display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.head-center:hover{
+	display: inline-block;
+	color: red;
+	border-top: 2px red solid;
+}
+.head-center{
+    display: inline-block;
+	border: 2px white solid;
+	height: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.search{
+    display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+.insearch{
+	border: 2px red solid;
+}
+.img2{
+    height: 22px;
+    width: 40px;
+    vertical-align: middle;
+	position: relative;
+	left: -5px;
+}
+.user{
+    display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.img3{
+    height: 30px;
+    border-radius: 30px;
+    vertical-align: middle;
+}
+.logout{
+    display: inline-block;
+    background-color: mediumseagreen;
+    color: white;
+    text-align: center;
+    height: 30px;
+    width: 70px;
+    line-height: 30px;
+    vertical-align: middle;
+	margin-left: 20px;
+}
+/*导航栏结束*/
+.page1{
+	width:1000px;
+	margin: auto;
+	background-color: white;
+}
+.piccopy img{
+	width: 1000px;
+}
+.container{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+.containerHead{
+	width: 100px;
+	height: 100px;
+	border: 2.5px seagreen solid;
+	border-radius: 100px;
+	line-height: 100px;
+	text-align: center;
+	margin: 0 auto;
+	color: #3CB371;
+	font-size: 30px;
+}
+.list{
+	width: 200px;
+	border-right: 1px lightgray solid;
+}
+
+#red{
+	text-decoration: none;
+	color: #000000;
+}
+#red:hover{
+	color: red;
+}
+.plus{
+	display: inline-block;
+	color: #1DC091;
+	border: 1.5px #1DC091 solid;
+	border-radius: 20px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+}
+
+
+
+/*part2*/
+.page2{
+	width:1000px;
+	margin: auto;
+	background-color: white;
+	margin-top: 20px;
+}
+.page2Head{
+	text-align: center;
+	padding-top: 20px;
+}
+.size{
+	font-size: 25px;
+}
+.green{
+	color: limegreen;
+}
+.container2{
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: 30px;
+	justify-content: center;
+}
+.course{
+	text-align: center;
+	width:140px;
+	height:103px;
+	border:2px solid rgba(29,192,145,1);
+	display: table;
+}
+#left{
+	margin-left: 150px;
+}
+#right{
+	margin-right: 150px;
+}
+.course:hover{
+	background-color: #2E8B57;
+	color: white;
+}
+.cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+.NO{
+	text-align: center;
+	width:140px;
+	height:105px;
+	line-height: 105px;
+	color: red;
+	text-decoration: underline;
+	font-size: 40px;
+}
+/*part3*/
+.page3{
+	width:1000px;
+	margin: auto;
+	background-color: white;
+	margin-top: 20px;
+	height: 400px;
+}
+.page3Head{
+	text-align: center;
+	padding-top: 20px;
+}
+.container3{
+	width: 750px;
+	margin: auto;
+}
+.like{
+	width:175px;
+	height:90px;
+	background:rgba(244,67,54,1);
+	opacity:0.7;
+	display: inline-block;
+	margin-top: 100px;
+	text-align: center;
+	color: white;
+	padding-top: 50px;
+	position: relative;
+	display: inline-block;
+}
+.like .picVisible{
+	visibility: hidden;
+	position: absolute;
+	z-index: 1;
+}
+.picVisible img{
+	width: 120px;
+	height: 60px;
+}
+.like:hover .picVisible{
+	visibility: visible;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -60px;
+}
+.like:hover{
+	opacity: 1;
+}
+/*footer*/
+.footer{
+	background-color:rgba(51, 51, 51, 1);
+	width: 100%;
+	height: 90px;
+	text-align: center;
+	color: rgba(155, 155, 155, 1);
+}
+.footer img{
+	height: 43px;
+}
+#blank{
+	width:3px;
+	height:4px;
+	background:rgba(234,90,112,1);
+	border-radius:2px;
+}
+.muxi{
+	padding-right: 10px;
+	letter-spacing: 4px;
+}
+.studio{
+	padding-right: 10px;
+	letter-spacing: 4px;
+}
+.ccnu{
+	padding-left: 10px;
+}
