@@ -11,13 +11,13 @@ int average(int score[n][s]){
 float rate(int score[n][s],int x){
     int P = 0;
     for (int i = 0; i < n; i++){
-        if(score[i][x] >=60){
+        if(score[i][x] >= 60){
             P++;
         }
     }
     return (double)P / n ;
 }
-int rate(int score[n][s],char name[],int x){
+int rate(int score[n][s],char* name[],int x){
     int max = score[0][x];
      for (int i = 0; i < n; i++){
         if(score[i][x] > max){
