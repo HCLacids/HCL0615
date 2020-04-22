@@ -26,7 +26,7 @@ int main(){
         printf("%d%s%c%d%d",student.num[i],student.name[i],student.sex[i],student.age[i],student.grade[i]);
     }
     for(int i = 0; i < 9;i++){
-        for(int j = 0; j <10;j++){
+        for(int j = 0; j <9 - i;j++){
             if(student.grade[j] > student.grade[j + 1]){
                 struct temp t;
                 t.age = student.age[j];
@@ -48,7 +48,7 @@ int main(){
         }
     }
      for(int i = 0; i < 10;i++){
-        printf("%d%s%c%d%d",student.num[i],student.name[i],student.sex[i],student.age[i],student.grade[i]);
+        printf("%d%s%c%d%d\n",student.num[i],student.name[i],student.sex[i],student.age[i],student.grade[i]);
     }
     return 0;
 }
