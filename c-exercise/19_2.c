@@ -1,32 +1,33 @@
 #include<stdio.h>
 
 void sort(int *a){
-	int *max,*min;
-	min = max = a;
-	int i,x,y;
-	for(i = 0;i < 10;i++)
-		if(min > *(a + i))
-			min = a + i,x = i;
-	for(i = 0;i < 10;i++)
-		if(max < *(a + i))
-			max = a + i,y = i;
-	int *temp1 = 0,*temp2 = 0;
-	temp1 = a + 9;
-	a + 9= max;
-	a + y = temp1;
-	temp2 = a;
-	a = min;
-	a + x = temp2;
+	int max = *a,min = *a,x,y;
+	for(int i = 0;i < 10;i++){
+		if(min > a[i]){
+			min = a[i];
+			x = i;
+		}	
+		else if(max < a[i]){
+			max = a[i];
+			y = i;
+		}
+	}	
+	int first = *a;
+	a[0] = min;
+	*(a+x)= first;	
+	int last = a[9];
+	*(a+9)= max;
+	*(a+y) = last;
 }
 
 int main(){
-	int *a;
-	int i;
+	int p[10] = {2,1,3,4,5,6,7,8,10,9};
+	int *a = p;
 	puts("enter ten nums:");
-	for(i = 0;i < 10;i++)
-	scanf("%d ",a + i); 
+	//for(int i = 0;i < 10;i++)
+	//scanf("%d",(a+i)); 
 	sort(a);
-	for(i = 0;i < 10;i++)	
-	printf("%d ",*(a + i));
+	for(int i = 0;i < 10;i++)	
+	printf("%d ",a[i]);
 	return 0;
 } 
