@@ -22,7 +22,7 @@ void sort(double *score, int n){
 		for(int j = i; j < n;j++){
 			if(*(score + j) < *(score + j + 1)){
 				int t = *(score + j);
-			 	*(score + j) = (score + j + 1);
+			 	*(score + j) = *(score + j + 1);
 			 	*(score + j + 1) = t;
 			}
 		}
@@ -31,13 +31,13 @@ void sort(double *score, int n){
 
 int main(){
 	double *score;
-	printf("ÇëÊäÈë100¸öÑ§ÉúCÓïÑÔ³É¼¨£º");
+	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½100ï¿½ï¿½Ñ§ï¿½ï¿½Cï¿½ï¿½ï¿½Ô³É¼ï¿½ï¿½ï¿½");
 	for(int i = 0; i < num; i++)
 		scanf("%f",score + i);
-	printf("×î¸ß·ÖÎª£º%f\n",max(score,num));
-	printf("¼°¸ñÂÊÎª£º%f\n",rate(score,num));
-	printf("·ÖÊýÅÅÐòÎª£º\n");
-	sort();
+	printf("ï¿½ï¿½ß·ï¿½Îªï¿½ï¿½%f\n",max(score,num));
+	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½%f\n",rate(score,num));
+	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½\n");
+	sort(score,num);
 	for(int i = 0; i < num; i++)
 		printf("%f\n",*(score + i));
 	return 0;

@@ -24,22 +24,22 @@ void sort(Staff staff[]){
 
 void find_out(Staff staff[], long id){
 	for(int i = 0; i <10; i++){
-		if(id === staff[i].id)
-		puts(staff.name);
+		if(id == staff[i].id)
+		puts(staff[i].name);
 	}
 }
 
 int main(){
 	Staff staff[10];
 	for(int i = 0; i < 10; i++){
-		puts("ÇëÊäÈëÖ°¹¤ºÅ:");
+		puts("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½:");
 		scanf("%ld",&staff[i].id);
-		puts("\nÇëÊäÈëÐÕÃû:");
+		puts("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:");
 		gets(staff[i].name);
 		putchar('\n');
 	}
 	sort(staff);
-	puts("ÇëÊäÈë²éÕÒµÄÔ±¹¤Ö°¹¤ºÅ:\n");
+	puts("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½Ô±ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½:\n");
 	long id;
 	scanf("%ld",&id);
 	find_out(staff,id);

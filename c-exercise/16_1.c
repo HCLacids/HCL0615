@@ -32,11 +32,11 @@ void greater_than_zero(float a,float b){
 	x2 = (-b - sqrt(disc)) / (2 * a);
 }
 
-void equal_to_zero(float ,float){
+void equal_to_zero(float a ,float b){
 	x1 = x2 = (-b) / (2 * a);
 }
 
-void smaller_than_zero(float ,float){
+void smaller_than_zero(float a,float b){
 	p = -b /(2 * a);
 	q = sqrt(-disc)/(2 *a);
 }
