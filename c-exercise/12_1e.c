@@ -28,7 +28,7 @@ void sort(STU *st,int n){
 void require (STU student[],int n){
     for (int i = 0; i < num; i++){
         if (student[i].sGrade[n] >= 90){
-            printf("%s %2.2d %2.2d %2.2d %2.2d %2.2d %2.2d",student[i].sId,student[i].sGrade[0],student[i].sGrade[1],student[i].sGrade[2],student[i].sGrade[3],student[i].sum,student[i].average);
+            printf("%s %2.2f %2.2f %2.2f %2.2f %2.2f %2.2f",student[i].sId,student[i].sGrade[0],student[i].sGrade[1],student[i].sGrade[2],student[i].sGrade[3],student[i].sum,student[i].average);
         }
     }
      STU *i,*j,t;
@@ -36,7 +36,7 @@ void require (STU student[],int n){
         for(j = i + 1;j < student + n;j++)
             if(i->sGrade[n] < j->sGrade[n]){t = *i;*i = *j;*j = t;}
     for (int i = 0; i < 5; i++){
-        printf("%s %2.2d %2.2d %2.2d %2.2d %2.2d %2.2d",student[i].sId,student[i].sGrade[0],student[i].sGrade[1],student[i].sGrade[2],student[i].sGrade[3],student[i].sum,student[i].average);
+        printf("%s %2.2f %2.2f %2.2f %2.2f %2.2f %2.2f",student[i].sId,student[i].sGrade[0],student[i].sGrade[1],student[i].sGrade[2],student[i].sGrade[3],student[i].sum,student[i].average);
     }
 }
 
