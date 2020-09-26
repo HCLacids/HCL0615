@@ -5,34 +5,34 @@ typedef struct node{
     char sname[10];
     int sage;
     float c_grade;
-    struct node* next;
+    struct node *next;
 } Student;
 
-Student* create(){
-    Student *p,*head,*q;
+Student *create(){
+    Student *p,*head,*end;
     int plot;
-    q = head = (Student*)malloc(sizeof(Student));
-    scanf("%s,%s,%d,%f",head->sid,head->sname,&(head->sage),&(head->c_grade));
+    head = (Student*)malloc(sizeof(Student));
+    end = head; 
     puts("是否创建结点? 是：1，否：0");
     scanf("%d",&plot);
     while (plot){
         p=(Student*)malloc(sizeof(Student));
-        scanf("%s,%s,%d,%f",p->sid,p->sname,&(p->sage),&(p->c_grade));
-        q->next = p;
-        q = p;
+        scanf("%s %s %d %f",p->sid,p->sname,&(p->sage),&(p->c_grade));
+        end->next = p;
+        end = p;
         puts("是否继续创建结点? 是：1，否：0");
         scanf("%d",&plot);
     }
-    p->next = NULL;
+    end->next = NULL;
     return head;
 }
 
 void print(Student *List){
     while (List->next != NULL){
-        printf("%s,%s,%d,%f\n",List->sid,List->sname,List->sage,List->c_grade);
-        List = List->next;
+    	List = List->next;
+        printf("%s %s %d %f\n",List->sid,List->sname,List->sage,List->c_grade);
+        
     }
-    printf("%s,%s,%d,%f\n",List->sid,List->sname,List->sage,List->c_grade);
 }
 
 void c_average(Student *List){
