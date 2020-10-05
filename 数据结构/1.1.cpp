@@ -48,16 +48,13 @@ void print(List *node){
 
 void insert_link(List *node, int x){
 	List *i;
-	while (node->next!=NULL){
+	while (node->next !=NULL && x >= node->data){
 		node = node->next;
-		if (x >= node->data){
-			i = (List *)malloc(sizeof(List));
-			i->data = x;
-			i->next = node->next;
-			node->next = i;
-		}
 	}
-	node->next = NULL;
+	i = (List *)malloc(sizeof(List));
+	i->data = x;
+	i->next = node->next;
+	node->next = i;
 }
 
 
@@ -74,7 +71,7 @@ int main(){
 	//????洢
 	List *node;
 	node = create();
-	insert_link(node,8);
+	insert_link(node,5);
 	print(node);
 	return 0;
 } 
