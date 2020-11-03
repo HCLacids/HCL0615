@@ -28,7 +28,7 @@ void pushQueue(SqQueue &q,int x){
 void popQueue(SqQueue &q,int &x){
     if((q.front+1)%q.queuesize == q.rear) return;
     x = q.queue[q.front++];
-    q.rear %= q.queuesize; 
+    q.front %= q.queuesize; 
 }
 
 int main(){
