@@ -22,13 +22,14 @@ void count_char(DSqString string){
     }
     cout<<"出现的数字有："<<endl;
     for (int i = 0; i < 10; i++){
-        if(AtoZ[i]) cout<<i<<"的个数为"<<number[i]<<endl;
+        if(number[i]) cout<<i<<"的个数为"<<number[i]<<endl;
     }
 }
 
 int main(){
     DSqString str;
     StrAssign_Sq(str,"1234567890ASDFSAF");
+    StrTraveres_Sq(str);
     count_char(str);
     return 0;
 }
