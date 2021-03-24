@@ -37,7 +37,15 @@ public class exp2_2 {
             case 0: flag = 0;break;
             case 1: flag = 0;break;
             case 2: flag = 0;break;
-            default:  System.out.print("Input Error, please input again:");break;
+            default:  
+                System.out.println("Input Error, please input again:");
+                lines();
+                stars();
+                System.out.println("* Welcome to the management system of students' grade! *");
+                stars();
+                lines();
+                enter();
+                break;
         }
        }
    } 
