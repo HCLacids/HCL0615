@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter2</title>
+</head>
+<style type="text/css">
+body {
+    font-size: 16px;
+}
+.padded{
+    font-size: 16px;
+    padding: 1em; /*same with font-size;*/
+}
+
+.box{
+    width: 3em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: lightgray;
+    margin: 1em;
+}
+
+.box-small{
+    font-size: 12px;
+}
+
+.box-large{
+    font-size: 18px;
+}
+
+.slogan{
+    font-size: 1.2em;
+    background-color: gray;
+    padding: 1.2em;
+}
+ul{
+    font-size: 0.8em;
+}
+
+ul ul{
+    font-size: 1em;
+}
+</style>
+<body>
+    <div class="padded">some content</div>
+    <div class="box box-small">Small</div>
+    <div class="box box-large">Large</div>
+    We love coffee
+    <div class="slogan">We love coffee</div>
+    <ul>
+        <li>Top Level
+            <ul>
+                <li>
+                    Second level
+                    <ul>
+                        Third level
+                        <ul>
+                            <li>Fourth level
+                                <ul>
+                                    <li>Fifth level</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
+<!-- px is absolute, rem ect is relative -->
