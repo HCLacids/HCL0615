@@ -44,7 +44,7 @@ ul ul{
     font-size: 1em;
 } */
 
-:root{
+/* :root{
     font-size: 0.875em;
 }
 
@@ -60,11 +60,65 @@ ul ul{
     }
 }
 
+.panel{
+    font-size: 1rem;
+    padding: 1em;
+    border: 1px solid #999;
+    border-radius: 0.5em;
+}
+
 .panel > h2{
     margin-top: 0;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.panel.large{  No blankspace 
+    font-size: 1.2rem;
+} */
+
+/* body{
+    line-height: 1.2em;
+}
+.about-us{
+    font-size: 2em;
+} */
+/* :root{
+    --main-font: Helvetica, Arial, sans-serif;
+    --brand-color: #369;
+}
+p{
+    font-family: var(--main-font);
+    color: var(--secondary-color, blue);
+} */
+
+:root{
+    --main-bg: #fff;
+    --main-color: #000;
+}
+.panel{
+    font-size: 1rem;
+    padding: 1em;
+    border: 1px solid #999;
+    border-radius: 0.5em;
+    background-color: var(--main-bg);
+    color: var(--main-color);
+}
+
+.panel > h2 {
+    margin-top: 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dark{
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #999;
+    --main-bg: #333;
+    --main-color: #fff;
 }
 </style>
 <body>
@@ -94,12 +148,31 @@ ul ul{
     </ul> -->
     <div class="panel">
         <h2>Single-origin</h2>
-        <div class="panel-body">
+        <div class="body">
             We have built partnerships with small farms around the world to hand-select beans at the peak of seanson. We then carefully roast in 
             <a href="/batch-size">Small batches</a> to maximize their potential.
         </div>
     </div>
-
+    <aside class="dark">
+        <div class="panel">
+            <h2>Single-origin</h2>
+            <div class="body">
+                We have built partnerships with small farms around the world to hand-select beans at the peak of seanson. We then carefully roast in 
+                small batches to maximize their potential.
+            </div>
+        </div>
+    </aside>
+    <!-- <p class="about-us">
+        We have built partnerships with small farms around the world to hand-select beans at the peak of seanson. We then carefully roast in 
+        small batches to maximize their potential.
+    </p> -->
 </body>
+<script type="text/javascript">
+    var rootElement = document.documentElement;
+    var styles = getComputedStyle(rootElement);
+    var mainColor = styles.getPropertyValue('--main-bg');
+    console.log(String(mainColor).trim());
+    rootElement.style.setProperty('--main-bg','#cdf'); 
+</script>
 </html>
 <!-- px is absolute, rem ect is relative -->
