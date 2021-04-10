@@ -7,12 +7,12 @@
     <title>Chapter2</title>
 </head>
 <style type="text/css">
-body {
+/* body {
     font-size: 16px;
 }
 .padded{
     font-size: 16px;
-    padding: 1em; /*same with font-size;*/
+    padding: 1em; same with font-size;
 }
 
 .box{
@@ -35,17 +35,40 @@ body {
     font-size: 1.2em;
     background-color: gray;
     padding: 1.2em;
-}
+} 
 ul{
     font-size: 0.8em;
 }
 
 ul ul{
     font-size: 1em;
+} */
+
+:root{
+    font-size: 0.875em;
+}
+
+@media (min-width: 800px){
+    :root{
+        font-size: 0.875em;
+    }
+}
+
+@media (min-width: 1200px){
+    :root{
+        font-size: 1em;
+    }
+}
+
+.panel > h2{
+    margin-top: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 </style>
 <body>
-    <div class="padded">some content</div>
+    <!-- <div class="padded">some content</div>
     <div class="box box-small">Small</div>
     <div class="box box-large">Large</div>
     We love coffee
@@ -68,7 +91,15 @@ ul ul{
                 </li>
             </ul>
         </li>
-    </ul>
+    </ul> -->
+    <div class="panel">
+        <h2>Single-origin</h2>
+        <div class="panel-body">
+            We have built partnerships with small farms around the world to hand-select beans at the peak of seanson. We then carefully roast in 
+            <a href="/batch-size">Small batches</a> to maximize their potential.
+        </div>
+    </div>
+
 </body>
 </html>
 <!-- px is absolute, rem ect is relative -->
