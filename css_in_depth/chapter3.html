@@ -7,20 +7,27 @@
     <title>Chapter3</title>
 </head>
 <style type="text/css">
-:root{
+/* :root{
     box-sizing: border-box;
 }
 *,
 ::before,
 ::after{
     box-sizing: inherit;
-}
+} */
 body {
     background-color: #eee;
     font-family: Helvetica, Arial, sans-serif;
 }
 
+/* header{
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: 0.5em;
+} */
+
 header{
+    padding: 1em 1.5em;
     color: #fff;
     background-color: #0072b0;
     border-radius: 0.5em;
@@ -30,15 +37,45 @@ main{
     display: block;
 }
 
-.main{
+/* .wrapper{
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+} */
+
+/* .container{
+    display: table; 
+    width: 100%;
+    border-spacing: 1.5em 0;
+}  */
+.container{
+    display: flex;
+} 
+
+/* .main{
     box-sizing: border-box;
     float: left;
     width: 70%;
     background-color: #fff;
     border-radius: 0.5em;
+} */
+/* .main{
+    display: table-cell;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 0.5em;
+} */
+/* .main{
+    width: 70%;
+    background-color: #fff;
+    border-radius: 0.5em;
+} */
+.main{
+    padding: 1.5em;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 0.5em;
 }
-
-.sidebar{
+/* .sidebar{
     box-sizing: border-box;
     float: left;
     width: calc(30% - 1.5em);
@@ -46,24 +83,74 @@ main{
     padding: 1.5em;
     background-color: #fff;
     border-radius: 0.5em;
+} */
+/* .sidebar{
+    display: table-cell;
+    width: 30%;
+    margin-left: 1.5em;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 0.5em;
+} */
+/* .sidebar{
+    width: 30%;
+    margin-left: 1.5em;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 0.5em;
+} */
+.sidebar{
+    width: 30%;
+    margin-left: 1.5em;
+    margin-top: 0;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 0.5em;
+}
+.button-link{
+    display: block;
+    padding: 0.5em;
+    color: #fff;
+    background-color: #0090c9;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.button-link + .button-link{
+    margin-top: 1.5em;
+}
+
+.sponsor-link{
+    display: block;
+    color: #0072b0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body * + *{
+    margin-top: 1.5em;
 }
 </style>
 <body>
     <header>
         <h1>Franklin Running Club</h1>
     </header>
-    <div class="container">
-        <main class="main">
-            <h2>Come join us</h2>
-            <p>
-                The Franklin Running club meets at 6:00pm every Thursday at the town square. 
-                Runs are three to five miles, at your own pace.
-            </p>
-        </main>
-        <aside class="sidebar">
-            <div class="widget"></div>
-            <div class="widget"></div>
-        </aside>
+    <div class="wrapper">
+        <div class="container">
+            <main class="main">
+                <h2>Come join us</h2>
+                <p>
+                    The Franklin Running club meets at 6:00pm every Thursday at the town square. 
+                    Runs are three to five miles, at your own pace.
+                </p>
+            </main>
+            <aside class="sidebar">
+                <a href="/twitter" class="button-link">follow us on twitter</a>
+                <a href="facebook" class="button-link">like us on Facebook</a>
+                <a href="/sponsors" class="sponsor-link">become a sponsor</a>
+            </aside>
+        </div>
     </div>
 </body>
 <!-- 
@@ -71,5 +158,19 @@ main{
     margin border padding [content](width height) 
     border-box
     margin [border padding content](width height)
+    table layouts
+    flex-boxes
+    vertical-center
+    1.padding top and bottom are the same without the fixed height
+    2.tables
+    3.flex-boxes
+    4.line-height inline one line
+    5.calculate both cotainer and inner height
+    negtive margin
+    left and top are shifting
+    right and bottom are pushing
+    collapsed margin
+    .button-link + .button-link
+    lobotomized owl selector
 -->
 </html>
