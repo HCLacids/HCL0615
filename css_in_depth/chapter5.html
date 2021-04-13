@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter5</title>
+</head>
+<style type="text/css">
+:root{
+    box-sizing: border-box;
+}
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+body{
+    background-color: #709b90;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body * + * {
+    margin-top: 1.5em;
+}
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.site-nav{
+    display: flex;
+    padding: .5em;
+    border-radius: .2em;
+    padding-left: 0;
+    list-style-type: none;
+    background-color: #5f4b44;
+}
+.site-nav > li{
+    margin-top: 0;
+}
+.site-nav > li > a{
+    display: block;
+    padding: .5em 1em;
+    background-color: #cc6b5a;
+    color: white;
+    text-decoration: none;
+}
+
+.site-nav > li + li {
+    margin-left:  1.5em;
+}
+.site-nav > .nav-right{
+    margin-left: auto;
+}
+.site-nav:nth-child(1){
+    padding-left: .5em;
+}
+.title{
+    padding: 1.5em;
+    background-color: #fff;
+}
+.flex{
+    display: flex;
+}
+.flex > * + * {
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+.column-main{
+    flex:2;
+}
+.column-sidebar{
+    flex:1;
+}
+.login-form h3{
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+}
+.login-form input:not([type=checkbox]):not([type=radio]){
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+.login-form button{
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+.centered{
+    text-align: center;
+}
+.cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .7;
+}
+.cost>span{
+    margin-top: 0;
+}
+.cost-currency{
+    font-size: 2rem;
+}
+.cost-dollars{
+    font-size: 4rem;
+}
+.cost-cents{
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+.cta-button{
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+</style>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ink</h1>
+        </header>
+        <nav>
+            <ul class="site-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/support">Support</a></li>
+                <li class="nav-right"><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <main class="flex">
+            <div class="column-main title">
+                <h1>Team collaboration done right</h1>
+                <p>Thousands of teams from all over the world turn to <b>Ink</b> to communicate and get things done.</p>
+            </div>
+            <div class="column-sidebar">
+                <div class="title">
+                    <form class="login-form">
+                        <h3>
+                            Login
+                        </h3>
+                        <p>
+                            <label for="username">Username</label>
+                            <input id="username" type="text" name="username" />
+                        </p>
+                        <p>
+                            <label for="password">Password</label>
+                            <input id="password" type="password" name="password" />
+                        </p>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div class="title centered">
+                    <small>Starting at</small>
+                    <div class="cost">
+                        <span class="cost-currency">$</span>
+                        <span class="cost-dollars">20</span>
+                        <span class="cost-cents">.00</span>
+                    </div>
+                    <a class="cta-button" href="/pricing">
+                        Sign up
+                    </a>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
+<!-- notes:
+flexbox
+< descendant selector
+auto left margin will cause the margin to fill all the available space.
+flex property flex:2 flex:1 2/3 1/3
+flex-grow
+flex-shrink
+flex-basis is the basic space
+flexbox is divided into flex-basis and remiander
+flex-grow divide the remainder
+flex-shrink the content exceed and it will shrink.
+flex-direction 
+:not() pseudo-class
+[type=radio] attribute selectors
+-->
