@@ -1,22 +1,23 @@
+package people;
 public class ChinaPeople extends People {
     @Override
     public void speakHello() {
-        System.out.println("您好");
+        System.out.println("878687");
     }
 
     @Override
     public void averageHeight() {
         height = 168.78;
-        System.out.println("中国人的平均身高:" + height + " 厘米");
+        System.out.println("6587:" + height + " cm");
     }
 
     @Override
     public void averageWeight() {
         weight = 65;
-        System.out.println("中国人的平均体重:" + weight + "公斤");
+        System.out.println("8765747687:" + weight + "kg");
     }
 
     public void chinaGongfu() {
-        System.out.println("坐如钟,站如松,睡如弓");
+        System.out.println("9876567");
     }
 }

@@ -1,3 +1,4 @@
+package people;
 public class People {
     protected double weight;
     protected double height;

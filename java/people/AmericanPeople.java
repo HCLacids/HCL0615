@@ -1,3 +1,5 @@
+package people;
+
 public class AmericanPeople extends People {
     @Override
     public void speakHello(){
@@ -17,6 +19,6 @@ public class AmericanPeople extends People {
      }
      
      public void americanBoxing() {
-        System.out.println("直拳、钩拳、组合拳");
+        System.out.println("直123456");
      }
 }
