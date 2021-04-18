@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter6</title>
+</head>
+<style type="text/css">
+/* .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1rf 1rf;
+    grid-gap: 0.5em;
+}
+.grid > * {
+    background-color: darkgray;
+    color: white;
+    padding: 2em;
+    border-radius: 0.5em;
+} */
+:root{
+    box-sizing: border-box;
+}
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+body{
+    background-color: #709b90;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 1.5em;
+    max-width: 1080px;
+    margin: 0 auto;
+} */
+/* .container{
+    display: grid;
+    grid-template-columns: [left-start] 2fr
+                           [left-end right-start] 1fr
+                           [right-end];
+    grid-template-rows: repeat(4, [row] auto);
+    grid-gap: 1.5em;
+    max-width: 1080px;
+    margin: 0 auto;
+} */
+.container{
+    display: grid;
+    grid-template-areas: "title title"
+                         "nav nav"
+                         "main aside1"
+                         "main aside2";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 1.5em;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+/* header,
+nav{
+    grid-column: 1/ 3;
+    grid-row: span 1;
+} */
+/* header,
+nav{
+    grid-column: left-start / right-end;
+    grid-row: span 1;
+} */
+header{
+    grid-area: title;
+}
+nav{
+    grid-area: nav;
+}
+/* .main{
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+} */
+/* .main{
+    grid-column: left;
+    grid-row: row 3 / span 2;
+} */
+.main{
+    grid-area: main;
+}
+/* .sidebar-top{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.sidebar-bottom{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+} */
+/* .sidebar-top{
+    grid-column: right;
+    grid-row: 3 / 4;
+} */
+.sidebar-top{
+    grid-area: aside1;
+}
+/* .sidebar-bottom{
+    grid-column: right;
+    grid-row: 4 / 5;
+} */
+.sidebar-bottom{
+    grid-area: aside2;
+}
+.title{
+    padding: 1.5em;
+    background-color: #fff;
+}
+.title > :first-child{
+    margin-top: 0;
+}
+.title * + * {
+    margin-top:  1.5em;
+}
+.page-heading{
+    margin: 0;
+}
+.site-nav{
+    display: flex;
+    margin: 0;
+    padding: 0.5em;
+    background-color: #5f4b44;
+    list-style-type: none;
+    border-radius: 0.2em;
+}
+.site-nav > li{
+    margin-top: 0;
+}
+.site-nav > li > a{
+    display: block;
+    padding: 0.5em 1em;
+    background-color: #cc6b5a;
+    color: white;
+    text-decoration: none;
+}
+.site-nav > li + li{
+    margin-left: 1.5em;
+}
+.site-nav > .nav-right{
+    margin-left: auto;
+}
+.login-form h3{
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+}
+.login-form input:not([type=checkobox]):not([type=radio]){
+    display: block;
+    margin-top: 0;
+    width: 100%;
+}
+.login-form button{
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+.centered{
+    text-align: center;
+}
+.cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .7;
+}
+.cost>span{
+    margin-top: 0;
+}
+.cost-currency{
+    font-size: 2rem;
+}
+.cost-dollars{
+    font-size: 4rem;
+}
+.cost-cents{
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+.cta-button{
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+</style>
+<body>
+    <!-- <div class="grid">
+        <div class="a">a</div>
+        <div class="b">b</div>
+        <div class="c">c</div>
+        <div class="d">d</div>
+        <div class="e">e</div>
+        <div class="f">f</div>
+    </div> -->
+    <div class="container">
+        <header>
+            <h1 class="page-heading">Ink</h1>
+        </header>
+        <nav>
+            <ul class="site-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/support">Support</a></li>
+                <li class="nav-right"><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <main class="main title">
+                <h1>Team collaboration done right</h1>
+                <p>Thousands of teams from all over the world turn to <b>Ink</b> to communicate and get things done.</p>
+        </main>
+            <div class="sidebar-top title">
+                <form class="login-form">
+                    <h3>
+                        Login
+                    </h3>
+                    <p>
+                        <label for="username">Username</label>
+                        <input id="username" type="text" name="username" />
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input id="password" type="password" name="password" />
+                    </p>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+                <div class="sidebar-bottom title centered">
+                    <small>Starting at</small>
+                    <div class="cost">
+                        <span class="cost-currency">$</span>
+                        <span class="cost-dollars">20</span>
+                        <span class="cost-cents">.00</span>
+                    </div>
+                    <a class="cta-button" href="/pricing">
+                        Sign up
+                    </a>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
+<!-- 
+    notes:
+    grid layout
+    grid-template-columns: defines three columns of equal width
+    grid-template-rows: 1rf 1rf; defines two rows of equal height
+    new unit fr which represents each column's fraction unit
+    grid-gap: 0.5em 1em vertical 0.5em and horizontal 1em
+    grid-column is short for grid-row-start and grid-row-end
+    the same as grid-row 
+    span will span one grid track
+    grid-template-columns: [start] 2fr [center] 1fr [end]
+    the two columns with three grid lines
+    the vertical grid lines are named start center end
+    grid-column: start / end
+    grid-template-columns: [left-start] 2fr
+                        [left-end right-start] 1fr
+                        [right-end]
+    grid-column: left will span from the left-start to left-end
+    grid-row: row 3 / span 2; from the third row grid line span two tracks 
+    grid areas
+    grid-auto-flow 'dense'
+    grid-auto-flow flex-direction
+    @supports (display: grid)
+ -->

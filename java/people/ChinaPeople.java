@@ -1,5 +1,5 @@
 package people;
-public class ChinaPeople extends People {
+public class ChinaPeople extends People{
     @Override
     public void speakHello() {
         System.out.println("878687");
