@@ -37,6 +37,7 @@ button{
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 .modal-body{
     position: fixed;
@@ -47,6 +48,7 @@ button{
     padding: 2em 3em;
     background-color: #fff;
     overflow: auto;
+    z-index: 2;
 }
 /* .modal-close{
     cursor: pointer;
@@ -72,18 +74,37 @@ button{
     content: "\00D7";
 }
 .container{
+    display: flex;
     width: 80%;
     max-width: 1000px;
     margin: 1em auto;
+    min-height: 100vh;
 }
 .dropdown{
     display: inline-block;
     position: relative;
 }
-.dropdown-label{
+/* .dropdown-label{
     padding: 0.5em 1.5em;
     border: 1px solid #ccc;
     background-color: #eee;
+} */
+.dropdown-label{
+    padding: 0.5em 2em 0.5em 1.5em;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+.dropdown-label::after{
+    content: '';
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    border: 0.3em solid;
+    border-color: black transparent transparent;
+}
+.dropdown:hover .dropdown-label::after{
+    top: 0.7em;
+    border-color: transparent transparent black;
 }
 .dropdown-menu{
     display: none;
@@ -114,6 +135,16 @@ button{
 }
 .submenu > li > a:hover{
     background-color: #fff;
+}
+.col-main{
+    flex: 1 80%;
+}
+.col-sidebar{
+    flex: 20%;
+}
+.affix{
+    position: sticky;
+    top: 1em;
 }
 </style>
 <body>
@@ -153,21 +184,34 @@ button{
     })
     </script>
     <div class="container">
-        <nav>
-            <div class="dropdown">
-                <div class="dropdown-label">Main Menu</div>
-                <div class="dropdown-menu">
-                    <ul class="submenu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/coffees">Coffes</a></li>
-                        <li><a href="/brewers">Brewers</a></li>
-                        <li><a href="/specials">Specials</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
+        <main class="col-main">
+            <nav>
+                <div class="dropdown">
+                    <div class="dropdown-label">Main Menu</div>
+                    <div class="dropdown-menu">
+                        <ul class="submenu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/coffees">Coffes</a></li>
+                            <li><a href="/brewers">Brewers</a></li>
+                            <li><a href="/specials">Specials</a></li>
+                            <li><a href="/about">About</a></li>
+                        </ul>
+                    </div>
                 </div>
+            </nav>
+            <h1>Wombat Coffee Roasters</h1>
+        </main>
+        <aside class="col-sidebar">
+            <div class="affix">
+                <ul class="submenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/coffees">Coffes</a></li>
+                    <li><a href="/brewers">Brewers</a></li>
+                    <li><a href="/specials">Specials</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
             </div>
-        </nav>
-        <h1>Wombat Coffee Roasters</h1>
+        </aside>
     </div>
 </body>
 </html>
@@ -180,5 +224,7 @@ button{
     '\00D7' * unicode
     relative often establish a container for an absolutely positioned element inside it.
     :hover pseudo-class
-    css triangle
+    css triangle height and width is 0
+    stack flow
+    sticky
 -->
