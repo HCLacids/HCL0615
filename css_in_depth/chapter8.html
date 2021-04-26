@@ -129,6 +129,85 @@ main{
         font-size: 2.25rem;
     }
 }
+@media (min-width: 35em) {
+    .page-header {
+        padding: 1em;
+    }
+}
+@media (min-width: 35em) {
+    .hero {
+        padding: 5em 3em;
+        font-size: 1.2rem;
+    }
+}
+@media (min-width: 35em) {
+    main{
+        padding: 2em 1em;
+    }
+}
+@media (min-width: 35em) {
+    .menu-toggle {
+        display: none;
+    }
+    .menu-dropdown {
+        display: block;
+        position: static;
+    }
+}
+@media (min-width: 35em) {
+    .nav-menu {
+        display: flex;
+        border: 0;
+        padding: 0 1em;
+    }
+    .nav-menu > li {
+        flex: 1;
+    }
+    .nav-menu > li + li {
+        border: 0;
+    }
+    .nav-menu > li + a {
+        padding: 0.3em;
+        text-align: center;
+    }
+}
+@media (min-width: 35em) {
+    .row {
+        display: flex;
+        margin-left: -0.75em;
+        margin-right: -0.75em;
+    }
+    .column {
+        flex: 1;
+        margin-right: 0.75em;
+        margin-left: 0.75em;
+    }
+}
+@media (min-width: 50em){
+    .page-header{
+        padding: 1em 4em;
+    }
+}
+@media (min-width: 50em) {
+    .hero {
+        padding: 7em 6em;
+    }
+}
+@media (min-width: 50em) {
+    main{
+        padding: 2em 4em;
+    }
+}
+@media (min-width: 50em) {
+    .nav-menu {
+        padding: 0 4em;
+    }
+}
+@media (min-width: 50em) {
+    :root {
+        font-size: 1.125em;
+    }
+}
 </style>
 <body>
     <header id="header" class="page-header">
@@ -183,5 +262,8 @@ main{
 
 <!-- 
     notes:
-
+    media query
+    mainly via the media query to define the viewport on pc, mobile phone or ipad 
+    element query
+    fluid layouts
 -->
