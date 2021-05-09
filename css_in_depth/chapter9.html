@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter9</title>
+</head>
+<style type="text/css">
+/* base style */
+:root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* a simple module */
+.message {
+    padding: 0.8em 1.2em;
+    border-radius: 0.2em;
+    border: 1px solid #265559;
+    color: #265559;
+    background-color: #e0f0f2;
+}
+
+.message--success {
+    color: #2f5926;
+    border-color: #2f5926;
+    background-color: #cfe8c9;
+}
+
+.message--warning {
+    color: #594826;
+    border-color: #594826;
+    background-color: #e8dec9;
+}
+
+.message--error {
+    color: #59262f;
+    border-color: #59262f;
+    background-color: #e8c9cf;
+}
+
+.button{
+    padding: 0.5em 0.8em;
+    border: 1px solid #265559;
+    border-radius: 0.2em;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.button--success {
+    border-color: #cfe8c9;
+    color: #fff;
+    background-color: #2f5926;
+}
+
+.button--danger{
+    border-color: #e8c9c9;
+    color: #fff;
+    background-color: #a92323;
+}
+
+.button-small {
+    font-size: 0.8rem;
+}
+
+.button-large {
+    font-size: 1.2rem;
+}
+
+.media {
+    padding: 1.5em;
+    background-color: #eee;
+    border-radius: 0.5em;
+}
+
+.media::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.media__image {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.media__body {
+    overflow: auto;
+    margin-top: 0;
+}
+
+.media__body > h4 {
+    margin-top: 0;
+}
+
+.media--right > .media__image {
+    float: right;
+}
+</style>
+<body>
+    <div class="message">
+        Save successful
+    </div>
+    <hr/>
+    <div class="message message--error">
+        Invaild password
+    </div>
+    <hr/>
+    <button class="button button--large">Read more</button>
+    <button class="button button--success">Save</button>
+    <button class="button button--danger button-small">Cancel</button>
+    <hr/>
+    <div class="media">
+        <img src="/" alt="" class="media__image">
+        <div class="media__body">
+            <h4>Strength</h4>
+            <p>
+                Strength training is an important part of injury prevention. Focus on your core&mdash;especially your abs and glutes.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
