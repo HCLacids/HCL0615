@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter11</title>
+</head>
+<style type="text/css">
+.triangle {
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 40px solid red;
+}
+
+.fade {
+    height: 200px;
+    width: 400px;
+    background-image: linear-gradient(90deg, white, blue);
+}
+
+.bar {
+    height: 1em;
+    width: 400px;
+    background-image: repeating-linear-gradient(-45deg,
+    #57b, #57b 10px, #148 10px, #148 20px);
+    border-radius: 0.3em;
+}
+
+.radial {
+    height: 200px;
+    width:  400px;
+    background-image: radial-gradient(white, blue);
+}
+
+.button {
+    padding: 1em;
+    border: 0;
+    font-size: 0.8rem;
+    color: white;
+    border-radius: 0.5em;
+    background-image: linear-gradient(to bottom, #57b, #148);
+    box-shadow: 0.1em 0.1em 0.5em #124;
+}
+
+.button:active {
+    box-shadow: inset 0 0 0.5em #124,
+                inset 0 0.5em 1em rgba(0, 0, 0, 0.4);
+}
+.button2 {
+    padding: 1em;
+    border: 0;
+    color: white;
+    background-color: #57b;
+    font-size: 1rem;
+    padding: 0.8em;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.15);
+}
+
+.button2:hover {
+    background-color: #456ab6;
+}
+
+.button2:active {
+    background-color: #148;
+}
+
+.button3 {
+    padding: 0.8em;
+    border: 0;
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.5em;
+    background-color: #57b;
+    box-shadow: 0 0.4em #148;
+    text-shadow: 1px 1px #148;
+}
+
+.button3:active {
+    background-color: #456ab5;
+    transform: translateY(0.1em);
+    box-shadow: 0 0.3em #148;
+}
+</style>
+<body>
+    <div class="triangle"></div>
+    <hr/>
+    <div class="fade"></div>
+    <hr/>
+    <div class="bar"></div>
+    <hr/>
+    <div class="radial"></div>
+    <hr/>
+    <button class="button">
+        Sign up now
+    </button>
+    <hr/>
+    <button class="button2">
+        Sign up now
+    </button>
+    <hr/>
+    <button class="button3">
+        Sign up now
+    </button>
+</body>
+</html>
+<!-- 
+notes:
+1. review: triangle
+2. background gradient & drop shaow
+ background proverties: background-image background-position background-size background-repeate background-origin
+ background-clip background-attachment background-color
+ linear-gradient:
+ linear-gradient(angle, start color,[ color stop ,] end color)
+ when the count of parameters is up to three, the next color will stop the front color.
+ repeating-linear-gradient:
+ repeating-linear-gradient(  [ <angle> | to <side-or-corner> ,]? <color-stop> [, <color-stop>]+ )
+                            \---------------------------------/ \----------------------------/
+                              渐变轴的定义                                色标列表
+where <side-or-corner> = [left | right] || [top | bottom]
+   and <color-stop>     = <color> [ <percentage> | <length> ]?
+radial-gradient:
+radial-gradient(
+  [ [ circle || <length> ]                         [ at <position> ]? , |
+    [ ellipse || [ <length> | <percentage> ]{2} ]  [ at <position> ]? , |
+    [ [ circle | ellipse ] || <extent-keyword> ] [at <position> ]? , |
+    at <position> ,
+  ]?
+  <color-stop-list> [ , <color-stop-list> ]+
+)
+where <extent-keyword> = closest-corner | closest-side | farthest-corner | farthest-side
+   and <color-stop-list> = [ <lineßar-color-stop> [, <color-hint>? ]? ]#, <linear-color-stop>
+   and <linear-color-stop> = <color> [ <color-stop-length> ]?
+   and <color-stop-length> = [ <percentage> | <length> ]{1,2}
+   and <color-hint> = [ <percentage> | <length> ]
+box-shadow: 2px 2px 2px 1px black;
+            \-----/\------/
+            |          |
+offset(x) and (y)   blur radius
+inset keyword makes the shadow appear inside the border of element, rather than outside.
+blend mode
+-->
