@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter14</title>
+</head>
+<style type="text/css">
+    button {
+        background-color: hsl(180, 50%, 50%);
+        border: 0;
+        color: white;
+        font-size: 1rem;
+        padding: 0.3em 1em;
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition: background-color 0.3s linear 0.5s;
+    }
+
+    button:hover {
+        background-color: hsl(0, 50%, 50%);
+        border-radius: 1em;
+    }
+
+    .container {
+        position: relative;
+        height: 30px;
+    }
+
+    .box {
+        position: absolute;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        background-color: hsl(130, 50%, 50%);
+        transition: all 1s steps(3);
+    }
+
+    .container:hover .box {
+        left: 400px;
+    }
+</style>
+
+<body>
+    <button>Hover over me</button>
+    <hr/>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
+
+<!-- notes
+transition-property specifies which properties to transition
+transition: background-color 0.3s linear 0.5s;
+            \-property--/\Duration/\timing func/\delay/
+steps step(times, end)
+-->
