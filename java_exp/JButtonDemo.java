@@ -1,6 +1,5 @@
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.plaf.DimensionUIResource;
 
 import org.graalvm.compiler.graph.Graph;
 
