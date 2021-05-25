@@ -14,7 +14,7 @@ let weight = (n) => {
 
 var printNumbers = function(n) {
     let res = [];
-    for(let i = 1; weight(i) <= n; i++) {
+    for(let i = 1; i <= Math.pow(10 ,n) - 1; i++) {
         res.push(i);
     }
     return res;
