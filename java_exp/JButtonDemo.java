@@ -1,7 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
 
-
 public class JButtonDemo {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -29,4 +28,3 @@ class SimpleFrame extends JFrame {
         setLayout(new FlowLayout());
     }
 }
-
