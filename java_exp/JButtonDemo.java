@@ -12,6 +12,14 @@ public class JButtonDemo {
             frame.setBounds(0, 0, 400, 300);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setVisible(true);
+            JTextField txt = new JTextField(20);
+            frame.add(txt);
+            button.addActionListener(event -> {
+                txt.setText("button1");
+            });
+            button2.addActionListener(event -> {
+                txt.setText("button2");
+            });
         });
     }
 }

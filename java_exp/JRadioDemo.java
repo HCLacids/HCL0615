@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class JRadioDemo extends JFrame{
+public class JRadioDemo extends JFrame implements ItemListener, ActionListener {
     private JPanel buttonPanel;
     private static final int DEFAULT_WIDTH = 300;
     private static final int DEFAULT_HEIGHT = 200;
@@ -10,30 +10,44 @@ public class JRadioDemo extends JFrame{
     public JRadioDemo() {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
+
     public static class ColorAction implements ActionListener {
         private Color color;
+
         public ColorAction(Color color) {
             color = color;
         }
-        public void actionPerformed(ActionEvent e){
+
+        public void actionPerformed(ActionEvent e) {
             // frame.setBackground(color);
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             SimpleFrame frame = new SimpleFrame();
             JRadioDemo button = new JRadioDemo();
             JRadioButton red = new JRadioButton("Red");
             JRadioButton green = new JRadioButton("Green");
             JRadioButton blue = new JRadioButton("Blue");
+            ButtonGroup bg = new ButtonGroup();
+            bg.add(red);
+            bg.add(green);
+            bg.add(blue);
 
             ColorAction r = new ColorAction(Color.RED);
             ColorAction g = new ColorAction(Color.GREEN);
             ColorAction b = new ColorAction(Color.BLUE);
 
-            red.addActionListener(r);
-            green.addActionListener(g);
-            blue.addActionListener(b);
+            red.addActionListener(event -> {
+                frame.setBackground(Color.RED);
+            });
+            green.addActionListener(event -> {
+                frame.setBackground(Color.GREEN);
+            });
+            blue.addActionListener(event -> {
+                frame.setBackground(Color.BLUE);
+            });
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setVisible(true);
             frame.add(red);
@@ -55,4 +69,3 @@ class SimpleFrame extends JFrame {
         setLayout(new FlowLayout());
     }
 }
-
