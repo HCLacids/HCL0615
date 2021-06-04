@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter16</title>
+</head>
+<style type="text/css"> 
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation: over-and-back 1.5s linear 3;
+}
+
+@keyframes over-and-back {
+    0% {
+        background-color: hsl(0, 50%, 50%);
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(50px);
+    }
+    100% {
+        background-color: hsl(270, 50%, 50%);
+        transform: translate(0);
+    }
+} 
+</style>
+
+
+<body>
+    <div class="box"></div>
+</body>
+</html>
+
+<!-- notes
+
+animition: animition-name animition-duration animition-timing-function animition-iteration-count
+-->
