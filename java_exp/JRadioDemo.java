@@ -26,7 +26,6 @@ public class JRadioDemo extends JFrame implements ItemListener, ActionListener {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             SimpleFrame frame = new SimpleFrame();
-            JRadioDemo button = new JRadioDemo();
             JRadioButton red = new JRadioButton("Red");
             JRadioButton green = new JRadioButton("Green");
             JRadioButton blue = new JRadioButton("Blue");
@@ -34,10 +33,6 @@ public class JRadioDemo extends JFrame implements ItemListener, ActionListener {
             bg.add(red);
             bg.add(green);
             bg.add(blue);
-
-            ColorAction r = new ColorAction(Color.RED);
-            ColorAction g = new ColorAction(Color.GREEN);
-            ColorAction b = new ColorAction(Color.BLUE);
 
             red.addActionListener(event -> {
                 frame.setBackground(Color.RED);
