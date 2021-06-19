@@ -13,27 +13,32 @@ class GUI extends JFrame {
     JCheckBox hobby[] = new JCheckBox[5];
     JTextPane txt = new JTextPane();
     ButtonGroup g = new ButtonGroup();
-    int a[] = { 1 };
+    JButton button = new JButton("提交");
 
     GUI() {
+        int index = 0;
         setBounds(10, 10, 460, 360);
         setLayout(new FlowLayout());
         for (int i = 0; i < 5; i++) {
             ages[i] = new JRadioButton(i + 5 + "-" + (i + 15));
             ages[i].addActionListener(event -> {
-                a[0] = i;
+
             });
             add(ages[i]);
             g.add(ages[i]);
         }
         for (int i = 0; i < 5; i++) {
-            hobby[i] = new JCheckBox();
+            hobby[i] = new JCheckBox(i + "");
             hobby[i].addActionListener(event -> {
-                b.
+
             });
             add(hobby[i]);
         }
-
+        button.addActionListener(event -> {
+            txt.setText("");
+            add(txt);
+        });
+        add(button);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
