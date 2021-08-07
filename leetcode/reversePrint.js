@@ -11,14 +11,8 @@
  */
 var reversePrint = function(head) {
     let res = [];
-    let p;
-    if(head?.val || head?.next){
-        p = new ListNode(head?.val);
-        p.next = head?.next;
-    }else {
-        p = null;
-    }
-    while(p){
+    let p = head;
+    while(p) {
         res.unshift(p.val);
         p = p.next;
     }
