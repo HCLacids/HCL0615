@@ -3,6 +3,6 @@
   "server": "json-server db.json"
   },
   "dependencies": {
-    "json-server": "^0.16.3"
+    "json-server": "^0.17.1"
   }
 }
